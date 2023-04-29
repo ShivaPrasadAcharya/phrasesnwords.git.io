@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>quotes baldevjeee</title>
+  <title>Opinion & News</title>
   <style>
     /* set body styles */
     body {
@@ -11,11 +12,13 @@
       padding: 0;
       font-size: smaller;
     }
+
     /* set form styles */
     form {
       margin: 40px auto;
       max-width: 600px;
     }
+
     label {
       color: #666666;
       display: block;
@@ -23,6 +26,7 @@
       font-weight: bold;
       margin: 10px 0;
     }
+
     input,
     textarea {
       border: 2px solid #cccccc;
@@ -31,12 +35,14 @@
       padding: 10px;
       width: 100%;
     }
+
     input:focus,
     textarea:focus {
       border-color: #0070f3;
       box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.5);
       outline: none;
     }
+
     button {
       background-color: #0070f3;
       border: none;
@@ -48,29 +54,37 @@
       padding: 10px 20px;
       transition: background-color 0.2s;
     }
+
     button:hover {
       background-color: #0061c9;
     }
+
     #transpose-button {
       background-color: #b71c1c;
       margin-right: 10px;
     }
+
     #transpose-button:hover {
       background-color: #8c1b1b;
     }
+
     #copy-button {
       background-color: #0070f3;
       margin-right: 10px;
     }
+
     #copy-button:hover {
       background-color: #0061c9;
     }
+
     #submit-button {
       background-color: #1b5e20;
     }
+
     #submit-button:hover {
       background-color: #0d530d;
     }
+
     /* set code block styles */
     #code {
       background-color: #f7f7f7;
@@ -80,23 +94,29 @@
       padding: 20px;
       white-space: pre-wrap;
     }
+
     #code code {
       font-size: 16px;
     }
+
     #descriptionBox {
       background-color: yellow;
+      width: fit-content;
     }
+
     #developedby {
       font-style: italic;
       color: brown;
     }
+
     .link-container {
       position: fixed;
-      bottom: 50%;
+      bottom: 95%;
       left: 0;
       right: 0;
       text-align: bottom;
     }
+
     /* Style for the links */
     .link-container a {
       color: rgba(255, 38, 0, 0.971);
@@ -105,39 +125,58 @@
       margin-right: 20px;
       font-size: normal;
     }
+
+    .links {
+      text-align: right;
+    }
+
+    #searchInput {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      position: fixed;
+    }
+
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
-  <a href="https://shivaprasadacharya.github.io/najirform.git.io/" target="_blank">Jaganath </a>
-  <a href="https://shivaprasadacharya.github.io/quotesform.git.io/" target="_blank"> Baldev</a>
+  <div class="links">
+    <a href="https://shivaprasadacharya.github.io/webpagewithforms.git.io/" target="_blank">Webpage with Forms</a>  </div>
   <form>
     <a id="TOP"></a><label for="descriptionBox">ParkingText</label>
     <textarea id="descriptionBox" placeholder="Park your text here"></textarea><br>
-    <label for="h3-input">ID  &amp;#x003C; </label>
+    <label for="h3-input">ID </label>
     <input type="text" id="h3-input" placeholder="Enter id "><br>
     <br>
-    <label for="h4-input">Desc1 &amp;#x2192;</label>
+    <label for="h4-input">Phrase & Arrow &#x2192, &#8594</label>
     <textarea id="h4-input" placeholder="Enter Words & Phrases & arrow"></textarea>
     <br>
     <label for="h5-input">Desc2 </label>
-    <textarea id="h5-input" placeholder="Enter Arrow"></textarea>
+    <textarea id="h5-input" placeholder="Enter Substitutions"></textarea>
     <br>
     <label for="h6-input">Desc3 </label>
-    <textarea id="h6-input" placeholder="Enter Substitutions"></textarea>
+    <textarea id="h6-input" placeholder="Enter nil"></textarea>
     <br>
     <label for="h7-input">Desc4</label>
-    <textarea id="h7-input" placeholder="Enter your Comments here"></textarea>
-    <label for="h8-input">Desc5</label>
+    <textarea id="h7-input" placeholder="Enter nil"></textarea>
+    <label for="h8-input">Keywords</label>
     <textarea id="h8-input" placeholder="Enter your keywords here"></textarea>
     <br>
     <a id="MIDDLE"></a>
     <button type="button" id="transpose-button">Transpose</button>
     <button type="button" id="copy-button">Copy to Clipboard</button>
     <button type="button" id="submit-button">Submit</button>
-   
+    <button type="button" id="download-button">Download Text</button>
+
   </form>
-  <div id="code">
-  </div>
+  <div id="code"> </div>
   <script>
     const h3Input = document.getElementById("h3-input");
     const h3Element = document.getElementById("h3-element");
@@ -155,8 +194,7 @@
     const generateButton = document.getElementById("submit-button");
     generateButton.addEventListener("click", () => {
       const codeElement = document.getElementById("code");
-      codeElement.innerHTML = `<code>  &#x003C;table&#x003E;&#x003C;tr&#x003E;&#x003C;td&#x003E;${h3Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h4Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h5Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h6Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h7Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h8Input.value}&#x003C;/td&#x003E;&#x003C;/tr&#x003E;&#x003C;/table&#x003E; 
-</code>`;
+      codeElement.innerHTML = `<code>&#x003C;table&#x003E;&#x003C;tr&#x003E;&#x003C;td&#x003E;${h3Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h4Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h5Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h6Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h7Input.value}&#x003C;/td&#x003E;&#x003C;td&#x003E;${h8Input.value}&#x003C;/td&#x003E;&#x003C;/tr&#x003E;&#x003C;/table&#x003E;</code>`;
       // Hide all tables except for the one with the matching ID
       const parkingSection = document.getElementById("parkingsection");
       const rows = parkingSection.getElementsByTagName("tr");
@@ -169,24 +207,41 @@
         }
       }
     });
+
     //aUTOFILL SCRIPT//
     h3Input.addEventListener("input", () => {
-      const parkingSection = document.getElementById("parkingsection");
-      const rows = parkingSection.getElementsByTagName("tr");
-      for (let i = 0; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName("td");
-        if (cells[0].innerText === h3Input.value) {
-          h4Input.value = cells[1].innerHTML.replace(/<br>/g, "&#x003C;br&#x003E;").replace(/<b>/g, "&#x003C;b&#x003E;").replace(/<\/b>/g, "&#x003C;/b&#x003E;").replace(/<u>/g, "&#x003C;u&#x003E;").replace(/<\/u>/g, "&#x003C;/u&#x003E;");
-          h5Input.value = cells[2].innerHTML.replace(/<br>/g, "&#x003C;br&#x003E;").replace(/<b>/g, "&#x003C;b&#x003E;").replace(/<\/b>/g, "&#x003C;/b&#x003E;").replace(/<u>/g, "&#x003C;u&#x003E;").replace(/<\/u>/g, "&#x003C;/u&#x003E;");
-          h6Input.value = cells[3].innerHTML.replace(/<br>/g, "&#x003C;br&#x003E;").replace(/<b>/g, "&#x003C;b&#x003E;").replace(/<\/b>/g, "&#x003C;/b&#x003E;").replace(/<u>/g, "&#x003C;u&#x003E;").replace(/<\/u>/g, "&#x003C;/u&#x003E;");
-          h7Input.value = cells[4].innerHTML.replace(/<br>/g, "&#x003C;br&#x003E;").replace(/<b>/g, "&#x003C;b&#x003E;").replace(/<\/b>/g, "&#x003C;/b&#x003E;").replace(/<u>/g, "&#x003C;u&#x003E;").replace(/<\/u>/g, "&#x003C;/u&#x003E;");
-          h8Input.value = cells[5].innerHTML.replace(/<br>/g, "&#x003C;br&#x003E;").replace(/<b>/g, "&#x003C;b&#x003E;").replace(/<\/b>/g, "&#x003C;/b&#x003E;").replace(/<u>/g, "&#x003C;u&#x003E;").replace(/<\/u>/g, "&#x003C;/u&#x003E;");
-          rows[i].style.display = "table-row";
-        } else {
-          rows[i].style.display = "none";
-        }
+  const parkingSection = document.getElementById("parkingsection");
+  const rows = parkingSection.getElementsByTagName("tr");
+  let found = false;
+  for (let i = 0; i < rows.length; i++) {
+    const cells = rows[i].getElementsByTagName("td");
+    if (cells[0].innerText === h3Input.value) {
+      found = true;
+      for (let j = 0; j < 5; j++) {
+        [h4Input, h5Input, h6Input, h7Input, h8Input][j].value = cells[j + 1].innerHTML.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;");
       }
-    });
+      //h3Input.style.color = "green"; // set text color to green for auto-populated value
+      //break;
+    }
+  }
+  if (found) {
+    h3Input.style.backgroundColor = "green";
+    h4Input.style.color = "black";
+    h5Input.style.color = "black";
+    h6Input.style.color = "black";
+    h7Input.style.color = "black";
+    h8Input.style.color = "black";
+  } else {
+    h3Input.style.backgroundColor = "orange";
+    h4Input.style.color = "grey";
+    h5Input.style.color = "grey";
+    h6Input.style.color = "grey";
+    h7Input.style.color = "grey";
+    h8Input.style.color = "grey";
+  }
+});
+
+
     //Hide//
     function hideRows() {
       const parkingSection = document.getElementById("parkingsection");
@@ -265,7 +320,41 @@
             "&#x003C;u&#x003E; &#x003C;/u&#x003E; " +
             inputElement.value.substring(cursorPosition);
           inputElement.setSelectionRange(cursorPosition + 18, cursorPosition + 18); // Place the cursor inside the <u> tag
+        } else if (event.ctrlKey && event.key === 'l') {
+          event.preventDefault();
+          const cursorPosition = inputElement.selectionStart;
+          inputElement.value =
+            inputElement.value.substring(0, cursorPosition) +
+            "&#x003C;a href=&quot;&quot; target=&quot;&#x5F;&#x62;&#x6C;&#x61;&#x6E;&#x6B;&quot;&#x003E;&#x003C;/a&#x003E;" +
+            inputElement.value.substring(cursorPosition);
+          inputElement.setSelectionRange(cursorPosition + 21, cursorPosition + 21); // Place the cursor inside the href
+
+        } else if (event.ctrlKey && event.key === 'i') {
+          event.preventDefault();
+          const cursorPosition = inputElement.selectionStart;
+          inputElement.value =
+            inputElement.value.substring(0, cursorPosition) +
+            "&#x003C;i&#x003E; &#x003C;/i&#x003E;" +
+            inputElement.value.substring(cursorPosition);
+          inputElement.setSelectionRange(cursorPosition + 18, cursorPosition + 18); // Place the cursor inside the i
+        } else if (event.ctrlKey && event.key === '0') {
+          event.preventDefault();
+          const cursorPosition = inputElement.selectionStart;
+          inputElement.value =
+            inputElement.value.substring(0, cursorPosition) +
+            "&#x003C; &#x003E;" +
+            inputElement.value.substring(cursorPosition);
+          inputElement.setSelectionRange(cursorPosition + 8, cursorPosition + 8); // Place the cursor inside the tag
+        } else if (event.ctrlKey && event.key === '1') {
+          event.preventDefault();
+          const cursorPosition = inputElement.selectionStart;
+          inputElement.value =
+            inputElement.value.substring(0, cursorPosition) +
+            "&#x003C;/ &#x003E;" +
+            inputElement.value.substring(cursorPosition);
+          inputElement.setSelectionRange(cursorPosition + 9, cursorPosition + 9); // Place the cursor inside the tag
         }
+
         else if (event.ctrlKey && event.key === " ") { // Ctrl+Space
           event.preventDefault();
           const cursorPosition = inputElement.selectionStart;
@@ -275,6 +364,7 @@
             inputElement.value.substring(cursorPosition);
           inputElement.setSelectionRange(cursorPosition + 35, cursorPosition + 35); // Place the cursor inside the <u> tag
         }
+
       });
     }
     addLineBreakAndBold(h4Input);
@@ -282,21 +372,70 @@
     addLineBreakAndBold(h6Input);
     addLineBreakAndBold(h7Input);
     addLineBreakAndBold(h8Input);
-  </script>
 
+    //download as .text//
+const downloadButton = document.getElementById("download-button");
+downloadButton.addEventListener("click", () => {
+  // Get the table HTML code
+  const tableCode = document.getElementById("code").textContent;
+  // Create a blob from the table code
+  const blob = new Blob([tableCode], {type: "text/plain"});
+  // Create a URL for the blob
+  const url = URL.createObjectURL(blob);
+  // Create a download link
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "table.txt";
+  // Click the link to start the download
+  link.click();
+  // Remove the link and blob
+  link.remove();
+  URL.revokeObjectURL(url);
+});
+
+    //Search fuction script//
+  
+ function searchFunction() {
+  var input, filter, tables, rows, cells, i, j, k, txtValue, match;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  tables = document.getElementsByTagName("table");
+  for (i = 0; i < tables.length; i++) {
+    rows = tables[i].getElementsByTagName("tr");
+    for (j = 0; j < rows.length; j++) {
+      cells = rows[j].getElementsByTagName("td");
+      match = false;
+      for (k = 0; k < cells.length; k++) {
+        txtValue = cells[k].textContent || cells[k].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          rows[j].style.display = "";
+          match = true;
+          cells[k].innerHTML = txtValue.replace(new RegExp(filter, "gi"), function(match) {
+            return "<mark>" + match + "</mark>";
+          });
+        } else {
+          cells[k].innerHTML = txtValue;
+        }
+      }
+      if (!match) {
+        rows[j].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+ 
   <section id="parkingsection">
 
-    <table><tr><td>000.000</td><td>EnglishMedium→E<br> <br>InitialAlphabet→00-26<br>Digits to be used→4<br>  <br> नेपाली→N<br> क-ज्ञ→01-36<br> अ-अं→40-52<br> अङ्कसंख्या→4</td><td>nil</td><td>nil</td><td>nil</td><td>nil</td></tr></table> 
-
-    <table><tr><td>N42.001</td><td>आदरणीय→समादरणीय</td><td>nil</td><td>nil</td><td>nil</td><td>nil</td></tr></table>
-
-    <table><tr><td>N22.001</td><td>फड्को →छलाङ</td><td>nil</td><td>nil</td><td>nil</td><td>nil</td></tr></table> 
- 
+    <table><tr><td>000</td><td> 1: Give your brief Introduction.<br> 2.विज्ञान छोडेर कानूनमा किन आउनुभयो? <br> 3.How will match social science and Pure Science?<br> 4. कानून र सरकारी वकील समूहमा कुन समूह रोज्नुहुन्छ र किन?<br> 5. Principle of beneficial construction के हो?<br> 6. MLA र Extradiction मा के फरक छ?<br> 7. सैद्धान्तिक सहमति भनेको के हो र कसरी लिइन्छ?<br> 8. Juristic  Writing लाई पनि International Law को एउटा source मानिन्छ, तर त्यो writing biased छ वा छैन भन्ने कसरी थाहा पाउने सकिन्छ, कुनै Institution छ यसको अध्ययन गर्ने?<br> 9.संविधान र कानूनी सिद्धान्त conflict भयो भने कुन हावी हुन्छ?<br> 10. Unjust Enrichment के हो र यो कसरी थाहा हुन्छ? <br> 11.फलोभोग, माथवर, सुविधाभार<br> Money Laundering<br> Organized Crime<br> </td><td>Documented as dictated by KamalKant Sir and Prakash Bhatta Sir.</td><td></td><td></td><td></td></tr></table>
   </section>
 </body>
+
 <footer>
-  <a id="BOTTOM"></a></p>
-  <p id="developedby"><u><b>Developed By:</b></u><br> Debaka Timilsina (M.A, M.Ed; LL.B) <br> Shiva Prasad
+    <a id="BOTTOM"></a></p>
+    <input type="text" id="search" onkeyup="searchFunction()" placeholder="Search...हरिनाम हरिनाम हरिनामैव केवलम् कलो नास्तैव नास्तैव नास्तैव गतिरन्यथा">
+    <p id="developedby"><u><b>Developed By:</b></u><br> Debaka Timilsina (M.A, M.Ed; LL.B) <br> Shiva Prasad
     Acharya
     (M.Sc.; LL.M)<br> श्री अक्षयतृतीया, २०८०
   <div class="link-container">
@@ -305,6 +444,7 @@
     <a href="#BOTTOM">&#x25BC;</a>
   </div>
 </footer>
+
 </html>
 <!--format preserved in transpose, autofillwith breaks n bolds, table filtered, this is for phrasesnwords-->
-<!--.-->
+<!--Interview tips-->
